@@ -1,0 +1,275 @@
+body {
+	background-color: white;
+	font-size: 18px;
+	line-height: 1.15;
+	margin: 0;
+	padding: 0;
+}
+  
+nav a:hover, nav a:focus {
+	text-decoration: underline;
+}
+
+nav a, .skip a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.skip a {
+	position: absolute;
+	top: -40px;
+}
+  
+.skip a:focus {
+	position: absolute;
+	top: 20px;
+}
+
+*:focus {
+	border: 2px solid #000000;
+}
+
+nav {
+	text-align: right;
+	padding: 30px 10px 30px 10px;
+	background: pink;
+}
+
+nav li {
+	display: inline;
+    padding-right: 20px;
+}
+
+.active {
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 45px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h2, p {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	background: pink;
+}
+
+
+/* About Page */
+.container1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.title {
+	grid-column: 1/-1;
+}
+
+/* Methods Page */
+.container2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+
+img {
+	width: 60%;
+}
+
+.cover {
+	grid-column: 1/-1;
+	width: 100%;
+}
+
+
+.int1, .int2, .int3, .afd, .survey1, .survey2, .survey3, .survey4 {
+	display: block;
+	width: 60%;
+}
+
+/* Outcomes Page */
+.container3 {
+	display: flex;
+	flex-direction: column;
+}
+
+.Persona, .JM, .TAD, .NS {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.per1, .per2, .per3, .JM2, .TAD2, .NS1 {
+	display: block;
+	width: 60%;
+}
+
+#BtnContainer {
+	display: none;
+}
+
+@media screen and (min-width: 800px){
+	/* Methods Page */
+	.container2 {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+		align-items: center;
+	}
+
+	.int1, .int2, .int3, .afd, .survey1, .survey2, .survey3, .survey4 {
+		width: 75%;
+	}
+
+	img {
+		width: 75%;
+	}
+
+	/* Outcomes Page */
+	.container3 {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.title1 {
+		flex-basis: 100%;
+	}
+
+	.Persona, .JM , .TAD, .NS {
+		flex-basis: 50%;
+		border: 1px solid black;
+		box-sizing: border-box;
+	}
+
+	.Persona h2, .JM h2, .TAD h2, .NS h2 {
+		width: 50%;
+	}
+
+	.per1, .per2, .per3, .JM2, .TAD2, .NS1 {
+		width: 75%;
+	}
+	
+
+}
+
+@media screen and (min-width: 1200px){
+	/* Methods Page */
+	.container2 {
+		grid-template-columns: 50px auto 50px auto 50px;
+		justify-items: center;
+		align-items: center;
+	}
+
+	.int-img1, .int1, .int2 {
+		grid-column: 2/span 1;
+	}
+
+	.int1, .int2{
+		grid-row: 5/span 1;
+	}
+
+	.int2, .int-img2 {
+		grid-column: 4/span 1;
+	}
+
+	.int3, .int-img3, .afd, .afd-img {
+		grid-row: 6/span 1;
+		grid-column: 2/span 3;
+	}
+
+	.int3 {
+		grid-row: 7/span 1;
+	}
+
+	.afd, .afd-img {
+		grid-row: 9/span 1;
+	}
+
+	.afd {
+		grid-row: 10/span 1;
+	}
+
+	.survey1, .survey-img1, .survey3, .survey-img3 {
+		grid-column: 2/span 1;
+	}
+
+	.survey1 {
+		grid-row: 13/span 1;
+	}
+
+	.survey2, .survey-img2, .survey4, .survey-img4 {
+		grid-column: 4/span 1;
+	}
+
+	.survey-img3, .survey-img4 {
+		grid-row: 14/span 1;
+	}
+
+	/* Outcomes Page */
+	.container3 {
+		flex-direction: column;
+	}
+
+	.Persona, .JM, .TAD, .NS {
+		flex-direction: row;
+		flex-wrap: wrap;
+		border: none;
+	}
+
+	.per-img1, .Persona h2, .JM-img1, .JM h2, .TAD-img1, .TAD h2, .NS-img1, .NS h2{
+		flex-basis: 100%;
+	}
+
+	.per-img2, .per-img3, .per2, .per3, .JM-img2, .JM2, .TAD-img2, .TAD2 {
+		width: 50%;
+	}
+
+	.NS1 {
+		width: 100%;
+	}
+
+	/* Button style */
+	#BtnContainer {
+		display: flex;
+		justify-content: center;
+	}
+
+	.btn1, .btn2, .btn3, .btn4, .btn5 {
+		border: none;
+		outline: none;
+		padding: 15px;
+		background-color: #F1F1F1;
+		cursor: pointer;
+		margin: 10px;
+		font-size: 20px;
+		border-radius: 10px;
+	}
+	
+	.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover {
+		background-color: #DDDDDD;
+	}
+	
+	.btn1.active1, .btn2.active1, .btn3.active1, .btn4.active1, .btn5.active1 {
+		background-color: #666666;
+		color: white;
+	}
+
+	.btn1:focus, .btn2:focus, .btn3:focus, .btn4:focus, .btn5:focus {
+		border: 2px solid #000000;
+	}
+
+	.hide {
+		display: none;
+	}
+	
+}
